@@ -1,16 +1,18 @@
 <?php
+    include 'db_connect.php';
+
     if(isset($_POST["key_word"])){
         if($_POST["key_word"] == ""){
             $alert = "No key word";
             return;
         }
         $key_word = $_POST['key_word'];
-        $server_name = 'localhost';
-        $username = 'root';
-        $password = '';
-        $db='chat_bot';
+        // $server_name = 'localhost';
+        // $username = 'root';
+        // $password = '';
+        // $db='chat_bot';
 
-        $conn = new mysqli($server_name, $username, $password,$db);
+        // $conn = new mysqli($server_name, $username, $password,$db);
 
         if (!empty($conn->connect_error)) {
             die('資料庫連線錯誤:' . $conn->connect_error);
@@ -18,7 +20,6 @@
 
         $sql = "SELECT * FROM `histories`;";
         $results = $conn->query($sql);
-
         $key_word = $_POST['key_word'];
         $search_results = array();
 
@@ -60,4 +61,5 @@
        
         $_POST=[];
       }
-    ?>
+    $conn->close();
+?>
