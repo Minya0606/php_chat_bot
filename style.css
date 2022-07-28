@@ -1,0 +1,137 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split-left {
+  height: 100%;
+  width: 60%;
+  float:left;
+  left: 0;
+}
+
+.split-right {
+  height: 100%;
+  width: 40%;
+  float:left;
+  right: 0;
+}
+
+.body-container{
+  margin-top:10px;
+  height: 90%;
+  overflow-y: hidden;
+}
+
+.message-box{
+  height: 90%;
+  overflow-y: scroll;
+}
+
+/* Chat containers */
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  margin-top:40px;
+  float: left;
+  color: #999;
+}
+
+.text-right {
+  float: right;
+}
+
+.stick-bottom {
+  position: sticky;
+  bottom: 0;
+}
+
+form {
+  width:100%;
+  display: block;
+  margin-top: 10px;
+}
+
+input[type=text] {
+  display: inline;
+  height: 30px;
+  width: 50%;
+  border: 1px solid  gray;
+  margin-left: 10%;
+}
+
+input[type=submit] {
+  display: inline;
+  height: 30px;
+  width: 60px;
+  border: solid 1px gray;
+  border-radius: 6%;
+  background-color: lightblue;
+}
+
+.table-container{
+  height: 90%;
+  width: 90%;
+  margin-left: 5%;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  width:50%;
+  height: 30px;
+  border-bottom: 2px double;
+}
+td {
+  width: 50%;
+  height: 80px;
+}
+
+table tbody tr:nth-child(odd){
+  background-color: lightgray;
+}
