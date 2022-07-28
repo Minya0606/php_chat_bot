@@ -25,6 +25,7 @@
           ");
         }
         else {
+          print('<h3> Searching Key word: '.$key_word.'</h3>');
           print('<table>
           <thead>
             <tr>
